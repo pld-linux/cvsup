@@ -73,18 +73,18 @@ directory trees.
 %setup -q
 
 %build
-make M3TARGET=LINUXELF
+make M3TARGET=LINUXELF CFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 make install \
-	PREFIX=/usr \
+	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
 	M3TARGET=LINUXELF 
 
-strip $RPM_BUILD_ROOT/usr/{bin,sbin}/*
+strip $RPM_BUILD_ROOT/{%{_bindir},%{_sbindir}/*
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man*/* \
-	Acknowledgments Announce Blurb ChangeLog Install
+	Acknowledgments Announce Blurb ChangeLog
 
 %clean
 rm -rf $RPM_BUILD_ROOT

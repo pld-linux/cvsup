@@ -114,11 +114,11 @@ drzewa katalogowe.
 %setup -q
 
 %build
-make M3TARGET=LINUXELF CFLAGS="$RPM_OPT_FLAGS"
+%{__make} M3TARGET=LINUXELF CFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install \
+%{__make} install \
 	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
 	M3TARGET=LINUXELF 
 

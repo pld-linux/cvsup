@@ -1,18 +1,15 @@
-#
-# Spec file for cvsup utility
-# Thomas Lockhart 1999-01-22
-#
-Summary: A CVS-aware network file distribution system
-Name: cvsup
-Version: 15.5
-Release: 1
-Copyright: BSD
-Group: Development/Version Control
-Source: ftp://ftp.FreeBSD.org/pub/FreeBSD/CVSup/cvsup-15.5.tar.gz
-URL: http://www.polstra.com/projects/freeware/CVSup/
-Distribution: PostgreSQL Linux
-Vendor: PostgreSQL
-Packager: Thomas Lockhart <lockhart@alumni.caltech.edu>
+Summary:	A CVS-aware network file distribution system
+Name:		cvsup
+Version:	16.0
+Release:	1
+Group:		Development/Version Control
+Group(pl):	Programowanie/Zarz±dzanie wersjami
+Copyright:	BSD
+URL:		http://www.polstra.com/projects/freeware/CVSup/
+Source:		ftp://ftp.FreeBSD.org/pub/FreeBSD/CVSup/%{name}-%{version}.tar.gz
+Requires:	Modula-3
+BuildRoot:	/tmp/%{name}-%{version}-root
+
 %description
 CVSup is a next-generation replacement for sup.  It is a leap
 forward, in terms of capability, speed, and server efficiency.
@@ -28,8 +25,10 @@ CVSup offers the following advantages:
 
 
 %package client
-Summary: Client-side CVSup package
-Group: Development/Version Control
+Summary:	Client-side CVSup package
+Group:		Development/Version Control
+Group(pl):	Programowanie/Zarz±dzanie wersjami
+
 %description client
 CVSup is a next-generation replacement for sup.  It is a leap
 forward, in terms of capability, speed, and server efficiency.
@@ -49,8 +48,10 @@ of other kinds of directory trees.
 
 
 %package server
-Summary: Server-side CVSup package
-Group: Development/Version Control
+Summary:	Server-side CVSup package
+Group:		Development/Version Control
+Group(pl):	Programowanie/Zarz±dzanie wersjami
+
 %description server
 CVSup is a next-generation replacement for sup.  It is a leap
 forward, in terms of capability, speed, and server efficiency.
@@ -68,30 +69,42 @@ The server package allows a developer to publish a full or
 partial CVS repository. CVSup can also publish other kinds of
 directory trees.
 
-
 %prep
-%setup
-
+%setup -q
 
 %build
-make M3TARGET=LINUXELF M3FLAGS="-DNOGUI -DSTATIC"
-
+make M3TARGET=LINUXELF
 
 %install
-make M3TARGET=LINUXELF M3FLAGS="-DNOGUI" install
+make install \
+	PREFIX=/usr \
+	M3TARGET=LINUXELF 
 
+strip $RPM_BUILD_ROOT/usr/{bin,sbin}/*
 
-%files client
-%doc Acknowledgments Announce Blurb ChangeLog Install
-/usr/local/bin/cvsup
-/usr/local/man/man1/cvsup.1
-
-
-%files server
-%doc Acknowledgments Announce Blurb ChangeLog Install
-/usr/local/sbin/cvsupd
-/usr/local/man/man8/cvsupd.8
-
+gzip -9nf $RPM_BUILD_ROOT/usr/man/man*/* \
+	Acknowledgments Announce Blurb ChangeLog Install
 
 %clean
-# put ancillary cleanup of files outside the build tree here...
+rm -rf $RPM_BUILD_ROOT
+
+%files client
+%doc *.gz
+/usr/bin/cvsup
+/usr/man/man1/cvsup.1.gz
+
+%files server
+%doc *.gz
+/usr/sbin/cvsupd
+/usr/man/man8/cvsupd.8.gz
+
+%changelog
+* Mon Apr 12 1999 Micha³ Kuratczyk <kura@pld.org.pl>
+  [1.16-1]
+- added %changelog
+- added gzipping documentation and man pages
+- added Group(pl)
+- added 'rm -rf $RPM_BUILD_ROOT' to %clean
+- added -q %setup parameter
+- added BuildRoot (by PLD standard)
+- added stripping binaries

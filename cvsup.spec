@@ -9,7 +9,7 @@ Copyright:	BSD
 Source:		ftp://ftp.FreeBSD.org/pub/FreeBSD/CVSup/%{name}-%{version}.tar.gz
 URL:		http://www.polstra.com/projects/freeware/CVSup/
 Requires:	Modula-3
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 CVSup is a next-generation replacement for sup.  It is a leap

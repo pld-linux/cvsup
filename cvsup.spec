@@ -120,19 +120,17 @@ rm -rf $RPM_BUILD_ROOT
 	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
 	M3TARGET=LINUXELF
 
-gzip -9nf Acknowledgments Announce Blurb ChangeLog
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files client
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Acknowledgments Announce Blurb ChangeLog
 %attr(755,root,root) %{_bindir}/cvsup
 %{_mandir}/man1/cvsup.1*
 
 %files server
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Acknowledgments Announce Blurb ChangeLog
 %attr(755,root,root) %{_sbindir}/cvsupd
 %{_mandir}/man8/cvsupd.8*

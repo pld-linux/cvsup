@@ -33,7 +33,7 @@ CVSup oferuje:
 - Mo¿liwo¶ci. Klienci mog± zarz±dzaæ lokalnymi drzewami.
 - Szybko¶æ. CVSup dzia³a bezpo¶rednio z repozytorium CVS na serwerze.
   Mo¿e on analizowaæ i edytowaæ pliku CVS. CVSup u¿ywa strumieniowego
-  protoko³u do aktualizowania (przesy³a skompesowane pliki by
+  protoko³u do aktualizowania (przesy³a skompresowane pliki aby
   zminimalizowaæ zajmowane pasmo).
 
 %package client

@@ -5,8 +5,8 @@ Release:	1
 Group:		Development/Version Control
 Group(pl):	Programowanie/Zarz±dzanie wersjami
 Copyright:	BSD
-URL:		http://www.polstra.com/projects/freeware/CVSup/
 Source:		ftp://ftp.FreeBSD.org/pub/FreeBSD/CVSup/%{name}-%{version}.tar.gz
+URL:		http://www.polstra.com/projects/freeware/CVSup/
 Requires:	Modula-3
 BuildRoot:	/tmp/%{name}-%{version}-root
 
@@ -76,6 +76,7 @@ directory trees.
 make M3TARGET=LINUXELF
 
 %install
+rm -rf $RPM_BUILD_ROOT
 make install \
 	PREFIX=/usr \
 	M3TARGET=LINUXELF 

@@ -90,7 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files client
 %doc *.gz
-/usr/bin/cvsup
+%{_bindir}/cvsup
 %{_mandir}/man1/cvsup.1.gz
 
 %files server

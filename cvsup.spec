@@ -1,4 +1,5 @@
 Summary:	A CVS-aware network file distribution system
+Summary(pl):	Sieciowy system dystrybucji plików zwi±zany z CVS.
 Name:		cvsup
 Version:	16.0
 Release:	1
@@ -23,9 +24,21 @@ CVSup offers the following advantages:
   protocol for updates and sends compressed diffs and reverse
   diffs of changes to minimize bandwidth.
 
+%description -l pl
+CVSup jest nastêpc± dla sup. CVSup jest szybkim, zgodnych
+z poprzednikami serwerem.
+
+CVSup oferuje:
+* Mo¿liwo¶ci. Klienci mog± zarz±dzaæ lokalnymi drzewami.
+* Szybko¶æ. CVSup dzia³a bezpo¶rednio z repozytorium CVS
+  na serwerze. Mo¿e on analizowaæ i edytowaæ pliku CVS.
+  CVSup u¿ywa strumieniowego protoko³u do aktualizowania
+  (przesy³a skompesowane pliki by zminimalizowaæ zajmowane
+  pasmo).
 
 %package client
 Summary:	Client-side CVSup package
+Summary(pl):	CVSup - klient
 Group:		Development/Version Control
 Group(pl):	Programowanie/Zarz±dzanie wersjami
 
@@ -46,9 +59,25 @@ The client package allows a developer to maintain a local copy
 of a full CVS repository. CVSup can also maintain local copies
 of other kinds of directory trees.
 
+%description -l pl client
+CVSup jest nastêpc± dla sup. CVSup jest szybkim, zgodnych
+z poprzednikami serwerem.
+
+CVSup oferuje:
+* Mo¿liwo¶ci. Klienci mog± zarz±dzaæ lokalnymi drzewami.
+* Szybko¶æ. CVSup dzia³a bezpo¶rednio z repozytorium CVS
+  na serwerze. Mo¿e on analizowaæ i edytowaæ pliku CVS.
+  CVSup u¿ywa strumieniowego protoko³u do aktualizowania
+  (przesy³a skompesowane pliki by zminimalizowaæ zajmowane
+  pasmo).
+
+Pakiet kliencki pozwala developerom zarz±dzaæ pe³n± lokaln±
+kopi± repozytorium CVS. CVSup mo¿e równie¿ zarz±dzaæ innymi
+lokalnymi kopiami drzew katalogowych.
 
 %package server
 Summary:	Server-side CVSup package
+Summary(pl):	CVSup - serwer
 Group:		Development/Version Control
 Group(pl):	Programowanie/Zarz±dzanie wersjami
 
@@ -68,6 +97,22 @@ CVSup offers the following advantages:
 The server package allows a developer to publish a full or
 partial CVS repository. CVSup can also publish other kinds of
 directory trees.
+
+%description -l pl server
+CVSup jest nastêpc± dla sup. CVSup jest szybkim, zgodnych
+z poprzednikami serwerem.
+
+CVSup oferuje:
+* Mo¿liwo¶ci. Klienci mog± zarz±dzaæ lokalnymi drzewami.
+* Szybko¶æ. CVSup dzia³a bezpo¶rednio z repozytorium CVS
+  na serwerze. Mo¿e on analizowaæ i edytowaæ pliku CVS.
+  CVSup u¿ywa strumieniowego protoko³u do aktualizowania
+  (przesy³a skompesowane pliki by zminimalizowaæ zajmowane
+  pasmo).
+
+Pakiet serwera pozwala developerom na publikowanie czê¶ciowo
+lub w ca³o¶ci repozytorium CVS. CVSup mo¿e tak¿e publikowaæ
+innego rodzaju drzewa katalogowe.
 
 %prep
 %setup -q

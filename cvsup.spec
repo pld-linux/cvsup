@@ -6,6 +6,7 @@ Release:	1
 Group:		Development/Version Control
 License:	BSD
 Source0:	ftp://ftp.FreeBSD.org/pub/FreeBSD/CVSup/%{name}-%{version}.tar.gz
+# Source0-md5:	bad884ccbd4ed129d360487c87c089a4
 URL:		http://www.polstra.com/projects/freeware/CVSup/
 Requires:	Modula-3
 BuildRequires:	pm3

@@ -4,8 +4,6 @@ Name:		cvsup
 Version:	16.0
 Release:	1
 Group:		Development/Version Control
-Group(de):	Entwicklung/Versionkontrolle
-Group(pl):	Programowanie/Zarz±dzanie wersjami
 License:	BSD
 Source0:	ftp://ftp.FreeBSD.org/pub/FreeBSD/CVSup/%{name}-%{version}.tar.gz
 URL:		http://www.polstra.com/projects/freeware/CVSup/
@@ -41,8 +39,6 @@ CVSup oferuje:
 Summary:	Client-side CVSup package
 Summary(pl):	CVSup - klient
 Group:		Development/Version Control
-Group(de):	Entwicklung/Versionkontrolle
-Group(pl):	Programowanie/Zarz±dzanie wersjami
 
 %description client
 CVSup is a next-generation replacement for sup. It is a leap forward,
@@ -80,8 +76,6 @@ kopiami drzew katalogowych.
 Summary:	Server-side CVSup package
 Summary(pl):	CVSup - serwer
 Group:		Development/Version Control
-Group(de):	Entwicklung/Versionkontrolle
-Group(pl):	Programowanie/Zarz±dzanie wersjami
 
 %description server
 CVSup is a next-generation replacement for sup. It is a leap forward,

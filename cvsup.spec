@@ -10,6 +10,7 @@ License:	BSD
 Source0:	ftp://ftp.FreeBSD.org/pub/FreeBSD/CVSup/%{name}-%{version}.tar.gz
 URL:		http://www.polstra.com/projects/freeware/CVSup/
 Requires:	Modula-3
+BuildRequires:	pm3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

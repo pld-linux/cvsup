@@ -98,14 +98,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %{_sbindir}/cvsupd
 %{_mandir}/man8/cvsupd.8.gz
-
-%changelog
-* Mon Apr 12 1999 Micha³ Kuratczyk <kura@pld.org.pl>
-  [1.16-1]
-- added %changelog
-- added gzipping documentation and man pages
-- added Group(pl)
-- added 'rm -rf $RPM_BUILD_ROOT' to %clean
-- added -q %setup parameter
-- added BuildRoot (by PLD standard)
-- added stripping binaries

@@ -95,7 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files server
 %doc *.gz
-/usr/sbin/cvsupd
+%{_sbindir}/cvsupd
 %{_mandir}/man8/cvsupd.8.gz
 
 %changelog

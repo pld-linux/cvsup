@@ -82,7 +82,7 @@ make install \
 
 strip $RPM_BUILD_ROOT/usr/{bin,sbin}/*
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man*/* \
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man*/* \
 	Acknowledgments Announce Blurb ChangeLog Install
 
 %clean
@@ -91,12 +91,12 @@ rm -rf $RPM_BUILD_ROOT
 %files client
 %doc *.gz
 /usr/bin/cvsup
-/usr/man/man1/cvsup.1.gz
+%{_mandir}/man1/cvsup.1.gz
 
 %files server
 %doc *.gz
 /usr/sbin/cvsupd
-/usr/man/man8/cvsupd.8.gz
+%{_mandir}/man8/cvsupd.8.gz
 
 %changelog
 * Mon Apr 12 1999 Micha³ Kuratczyk <kura@pld.org.pl>

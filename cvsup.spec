@@ -57,7 +57,7 @@ The client package allows a developer to maintain a local copy of a
 full CVS repository. CVSup can also maintain local copies of other
 kinds of directory trees.
 
-%description -l pl client
+%description client -l pl
 CVSup jest nastêpc± dla sup. CVSup jest szybkim, zgodnych z
 poprzednikami serwerem.
 
@@ -93,7 +93,7 @@ CVSup offers the following advantages:
 The server package allows a developer to publish a full or partial CVS
 repository. CVSup can also publish other kinds of directory trees.
 
-%description -l pl server
+%description server -l pl
 CVSup jest nastêpc± dla sup. CVSup jest szybkim, zgodnych z
 poprzednikami serwerem.
 
@@ -118,7 +118,7 @@ drzewa katalogowe.
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
-	M3TARGET=LINUXELF 
+	M3TARGET=LINUXELF
 
 gzip -9nf Acknowledgments Announce Blurb ChangeLog
 

@@ -8,8 +8,8 @@ License:	BSD
 Source0:	ftp://ftp.FreeBSD.org/pub/FreeBSD/CVSup/%{name}-%{version}.tar.gz
 # Source0-md5:	bad884ccbd4ed129d360487c87c089a4
 URL:		http://www.polstra.com/projects/freeware/CVSup/
-Requires:	Modula-3
 BuildRequires:	pm3
+Requires:	Modula-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,9 +32,9 @@ poprzednikami serwerem.
 CVSup oferuje:
 - Mo¿liwo¶ci. Klienci mog± zarz±dzaæ lokalnymi drzewami.
 - Szybko¶æ. CVSup dzia³a bezpo¶rednio z repozytorium CVS na serwerze.
-  Mo¿e on analizowaæ i edytowaæ pliku CVS. CVSup u¿ywa strumieniowego
-  protoko³u do aktualizowania (przesy³a skompresowane pliki aby
-  zminimalizowaæ zajmowane pasmo).
+  Mo¿e on analizowaæ i modyfikowaæ pliki CVS. CVSup u¿ywa
+  strumieniowego protoko³u do aktualizowania (przesy³a skompresowane
+  pliki aby zminimalizowaæ zajmowane pasmo).
 
 %package client
 Summary:	Client-side CVSup package
@@ -65,9 +65,9 @@ poprzednikami serwerem.
 CVSup oferuje:
 - Mo¿liwo¶ci. Klienci mog± zarz±dzaæ lokalnymi drzewami.
 - Szybko¶æ. CVSup dzia³a bezpo¶rednio z repozytorium CVS na serwerze.
-  Mo¿e on analizowaæ i edytowaæ pliku CVS. CVSup u¿ywa strumieniowego
-  protoko³u do aktualizowania (przesy³a skompesowane pliki by
-  zminimalizowaæ zajmowane pasmo).
+  Mo¿e on analizowaæ i modyfikowaæ pliki CVS. CVSup u¿ywa
+  strumieniowego protoko³u do aktualizowania (przesy³a skompresowane
+  pliki aby zminimalizowaæ zajmowane pasmo).
 
 Pakiet kliencki pozwala developerom zarz±dzaæ pe³n± lokaln± kopi±
 repozytorium CVS. CVSup mo¿e równie¿ zarz±dzaæ innymi lokalnymi
@@ -101,9 +101,9 @@ poprzednikami serwerem.
 CVSup oferuje:
 - Mo¿liwo¶ci. Klienci mog± zarz±dzaæ lokalnymi drzewami.
 - Szybko¶æ. CVSup dzia³a bezpo¶rednio z repozytorium CVS na serwerze.
-  Mo¿e on analizowaæ i edytowaæ pliku CVS. CVSup u¿ywa strumieniowego
-  protoko³u do aktualizowania (przesy³a skompesowane pliki by
-  zminimalizowaæ zajmowane pasmo).
+  Mo¿e on analizowaæ i modyfikowaæ pliki CVS. CVSup u¿ywa
+  strumieniowego protoko³u do aktualizowania (przesy³a skompresowane
+  pliki aby zminimalizowaæ zajmowane pasmo).
 
 Pakiet serwera pozwala developerom na publikowanie czê¶ciowo lub w
 ca³o¶ci repozytorium CVS. CVSup mo¿e tak¿e publikowaæ innego rodzaju
@@ -113,7 +113,9 @@ drzewa katalogowe.
 %setup -q
 
 %build
-%{__make} M3TARGET=LINUXELF CFLAGS="%{rpmcflags}"
+%{__make} \
+	M3TARGET=LINUXELF \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT

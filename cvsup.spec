@@ -4,6 +4,7 @@ Name:		cvsup
 Version:	16.0
 Release:	1
 Group:		Development/Version Control
+Group(de):	Entwicklung/Versionkontrolle
 Group(pl):	Programowanie/Zarz±dzanie wersjami
 License:	BSD
 Source0:	ftp://ftp.FreeBSD.org/pub/FreeBSD/CVSup/%{name}-%{version}.tar.gz
@@ -39,6 +40,7 @@ CVSup oferuje:
 Summary:	Client-side CVSup package
 Summary(pl):	CVSup - klient
 Group:		Development/Version Control
+Group(de):	Entwicklung/Versionkontrolle
 Group(pl):	Programowanie/Zarz±dzanie wersjami
 
 %description client
@@ -77,6 +79,7 @@ kopiami drzew katalogowych.
 Summary:	Server-side CVSup package
 Summary(pl):	CVSup - serwer
 Group:		Development/Version Control
+Group(de):	Entwicklung/Versionkontrolle
 Group(pl):	Programowanie/Zarz±dzanie wersjami
 
 %description server
@@ -114,7 +117,7 @@ drzewa katalogowe.
 %setup -q
 
 %build
-%{__make} M3TARGET=LINUXELF CFLAGS="$RPM_OPT_FLAGS"
+%{__make} M3TARGET=LINUXELF CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -122,10 +125,7 @@ rm -rf $RPM_BUILD_ROOT
 	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
 	M3TARGET=LINUXELF 
 
-strip $RPM_BUILD_ROOT/{%{_bindir},%{_sbindir}/*
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man*/* \
-	Acknowledgments Announce Blurb ChangeLog
+gzip -9nf Acknowledgments Announce Blurb ChangeLog
 
 %clean
 rm -rf $RPM_BUILD_ROOT

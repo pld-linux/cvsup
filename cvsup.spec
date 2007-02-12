@@ -1,5 +1,5 @@
 Summary:	A CVS-aware network file distribution system
-Summary(pl):	Sieciowy system dystrybucji plików zwi±zany z CVS
+Summary(pl.UTF-8):   Sieciowy system dystrybucji plikÃ³w zwiÄ…zany z CVS
 Name:		cvsup
 Version:	16.0
 Release:	1
@@ -25,20 +25,20 @@ CVSup offers the following advantages:
   and sends compressed diffs and reverse diffs of changes to minimize
   bandwidth.
 
-%description -l pl
-CVSup jest nastêpc± dla sup. CVSup jest szybkim, zgodnych z
+%description -l pl.UTF-8
+CVSup jest nastÄ™pcÄ… dla sup. CVSup jest szybkim, zgodnych z
 poprzednikami serwerem.
 
 CVSup oferuje:
-- Mo¿liwo¶ci. Klienci mog± zarz±dzaæ lokalnymi drzewami.
-- Szybko¶æ. CVSup dzia³a bezpo¶rednio z repozytorium CVS na serwerze.
-  Mo¿e on analizowaæ i modyfikowaæ pliki CVS. CVSup u¿ywa
-  strumieniowego protoko³u do aktualizowania (przesy³a skompresowane
-  pliki aby zminimalizowaæ zajmowane pasmo).
+- MoÅ¼liwoÅ›ci. Klienci mogÄ… zarzÄ…dzaÄ‡ lokalnymi drzewami.
+- SzybkoÅ›Ä‡. CVSup dziaÅ‚a bezpoÅ›rednio z repozytorium CVS na serwerze.
+  MoÅ¼e on analizowaÄ‡ i modyfikowaÄ‡ pliki CVS. CVSup uÅ¼ywa
+  strumieniowego protokoÅ‚u do aktualizowania (przesyÅ‚a skompresowane
+  pliki aby zminimalizowaÄ‡ zajmowane pasmo).
 
 %package client
 Summary:	Client-side CVSup package
-Summary(pl):	CVSup - klient
+Summary(pl.UTF-8):   CVSup - klient
 Group:		Development/Version Control
 
 %description client
@@ -58,24 +58,24 @@ The client package allows a developer to maintain a local copy of a
 full CVS repository. CVSup can also maintain local copies of other
 kinds of directory trees.
 
-%description client -l pl
-CVSup jest nastêpc± dla sup. CVSup jest szybkim, zgodnych z
+%description client -l pl.UTF-8
+CVSup jest nastÄ™pcÄ… dla sup. CVSup jest szybkim, zgodnych z
 poprzednikami serwerem.
 
 CVSup oferuje:
-- Mo¿liwo¶ci. Klienci mog± zarz±dzaæ lokalnymi drzewami.
-- Szybko¶æ. CVSup dzia³a bezpo¶rednio z repozytorium CVS na serwerze.
-  Mo¿e on analizowaæ i modyfikowaæ pliki CVS. CVSup u¿ywa
-  strumieniowego protoko³u do aktualizowania (przesy³a skompresowane
-  pliki aby zminimalizowaæ zajmowane pasmo).
+- MoÅ¼liwoÅ›ci. Klienci mogÄ… zarzÄ…dzaÄ‡ lokalnymi drzewami.
+- SzybkoÅ›Ä‡. CVSup dziaÅ‚a bezpoÅ›rednio z repozytorium CVS na serwerze.
+  MoÅ¼e on analizowaÄ‡ i modyfikowaÄ‡ pliki CVS. CVSup uÅ¼ywa
+  strumieniowego protokoÅ‚u do aktualizowania (przesyÅ‚a skompresowane
+  pliki aby zminimalizowaÄ‡ zajmowane pasmo).
 
-Pakiet kliencki pozwala developerom zarz±dzaæ pe³n± lokaln± kopi±
-repozytorium CVS. CVSup mo¿e równie¿ zarz±dzaæ innymi lokalnymi
+Pakiet kliencki pozwala developerom zarzÄ…dzaÄ‡ peÅ‚nÄ… lokalnÄ… kopiÄ…
+repozytorium CVS. CVSup moÅ¼e rÃ³wnieÅ¼ zarzÄ…dzaÄ‡ innymi lokalnymi
 kopiami drzew katalogowych.
 
 %package server
 Summary:	Server-side CVSup package
-Summary(pl):	CVSup - serwer
+Summary(pl.UTF-8):   CVSup - serwer
 Group:		Development/Version Control
 
 %description server
@@ -94,19 +94,19 @@ CVSup offers the following advantages:
 The server package allows a developer to publish a full or partial CVS
 repository. CVSup can also publish other kinds of directory trees.
 
-%description server -l pl
-CVSup jest nastêpc± dla sup. CVSup jest szybkim, zgodnych z
+%description server -l pl.UTF-8
+CVSup jest nastÄ™pcÄ… dla sup. CVSup jest szybkim, zgodnych z
 poprzednikami serwerem.
 
 CVSup oferuje:
-- Mo¿liwo¶ci. Klienci mog± zarz±dzaæ lokalnymi drzewami.
-- Szybko¶æ. CVSup dzia³a bezpo¶rednio z repozytorium CVS na serwerze.
-  Mo¿e on analizowaæ i modyfikowaæ pliki CVS. CVSup u¿ywa
-  strumieniowego protoko³u do aktualizowania (przesy³a skompresowane
-  pliki aby zminimalizowaæ zajmowane pasmo).
+- MoÅ¼liwoÅ›ci. Klienci mogÄ… zarzÄ…dzaÄ‡ lokalnymi drzewami.
+- SzybkoÅ›Ä‡. CVSup dziaÅ‚a bezpoÅ›rednio z repozytorium CVS na serwerze.
+  MoÅ¼e on analizowaÄ‡ i modyfikowaÄ‡ pliki CVS. CVSup uÅ¼ywa
+  strumieniowego protokoÅ‚u do aktualizowania (przesyÅ‚a skompresowane
+  pliki aby zminimalizowaÄ‡ zajmowane pasmo).
 
-Pakiet serwera pozwala developerom na publikowanie czê¶ciowo lub w
-ca³o¶ci repozytorium CVS. CVSup mo¿e tak¿e publikowaæ innego rodzaju
+Pakiet serwera pozwala developerom na publikowanie czÄ™Å›ciowo lub w
+caÅ‚oÅ›ci repozytorium CVS. CVSup moÅ¼e takÅ¼e publikowaÄ‡ innego rodzaju
 drzewa katalogowe.
 
 %prep

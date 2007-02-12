@@ -1,5 +1,5 @@
 Summary:	A CVS-aware network file distribution system
-Summary(pl.UTF-8):   Sieciowy system dystrybucji plików związany z CVS
+Summary(pl.UTF-8):	Sieciowy system dystrybucji plików związany z CVS
 Name:		cvsup
 Version:	16.0
 Release:	1
@@ -38,7 +38,7 @@ CVSup oferuje:
 
 %package client
 Summary:	Client-side CVSup package
-Summary(pl.UTF-8):   CVSup - klient
+Summary(pl.UTF-8):	CVSup - klient
 Group:		Development/Version Control
 
 %description client
@@ -75,7 +75,7 @@ kopiami drzew katalogowych.
 
 %package server
 Summary:	Server-side CVSup package
-Summary(pl.UTF-8):   CVSup - serwer
+Summary(pl.UTF-8):	CVSup - serwer
 Group:		Development/Version Control
 
 %description server
